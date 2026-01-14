@@ -28,7 +28,7 @@
 , writeShellApplication
 , xorg
 # , microchip-xc8
-, xc16
+, xc8
 # , microchip-xc32
 # , microchip-xc-dsc
 }:
@@ -100,8 +100,8 @@ let
       done
 
 
-      mkdir "$rt/overlay/opt/microchip/xc16"
-      ln -s ${xc16} "$rt/overlay/opt/microchip/xc16/v${xc16.version}"
+      mkdir "$rt/overlay/opt/microchip/xc8"
+      ln -s ${xc8} "$rt/overlay/opt/microchip/xc8/v${xc8.version}"
 
       # Make and mount (with FUSE) the newroot subdirectory.
       mkdir "$rt/newroot"
