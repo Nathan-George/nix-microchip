@@ -14,9 +14,10 @@ pkgs : rec {
    xc8_3_10 = pkgs.callPackage ./xc8/3.10.nix { };
    xc8 = xc8_3_10;
 
+   mplab-x-unwrapped_6_25 = pkgs.callPackage ./mplab-x-unwrapped/6.25.nix { };
    mplab-x-unwrapped_6_20 = pkgs.callPackage ./mplab-x-unwrapped/6.20.nix { };
    mplab-x-unwrapped_6_15 = pkgs.callPackage ./mplab-x-unwrapped/6.15.nix { };
-   mplab-x-unwrapped = mplab-x-unwrapped_6_20;
+   mplab-x-unwrapped = mplab-x-unwrapped_6_25;
 
    #FIXME: Rework this to pass an xc16 version as a parameter to mplab-x package rather than abusing the default..
    mplab-x = pkgs.callPackage ./mplab-x { inherit mplab-x-unwrapped xc8; };
